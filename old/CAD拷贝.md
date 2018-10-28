@@ -1,3 +1,23 @@
+使用方法:
+ 1.命令ee.
+  2.输入编号,为数字,用这个数字来开关显示所选的图形.
+   3.选择图形.
+输入命令:(刚刚你在第2步里面所输入的数字)则隐藏图形.
+两次输入命令::(刚刚你在第2步里面所输入的数字)则显示图形.
+
+把以下文件保存为 .lsp文件,用CAD加载即可食用,无需冷藏!.
+[quote]
+;隐藏或显示部分图形
+;作者wujimmy  来自:http://www.wujimmy.com
+(setq wjm_hide_lst nil)
+(defun c:ee()
+  (setq index_num (getint "图形组编号:"))
+  (princ "\n选择要显示或隐藏的图形:")
+  (setq es (ssget))
+  (if es
+    (progn
+  
+  (if (assoc index_num wjm_hide_lst)
 CAD的几个命令,可以在执行命令的时候,动态显示.
 可以实时看到显示效果,实在是众编程者所要的那种效果.
 

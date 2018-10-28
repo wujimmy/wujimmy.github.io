@@ -1,3 +1,18 @@
+Function getHTTPPage(url)
+  On Error Resume Next
+  Dim http
+  Set http = CreateObject("Microsoft.XMLHTTP")
+  http.Open "GET", url, False
+  http.send
+  If http.readystate <> 4 Then
+   Exit Function
+  End If
+  getHTTPPage = bytes2BSTR(http.responseBody)
+  Set http = Nothing
+
+ End Function
+
+ Function bytes2BSTR(vIn)
 庆祝一下,一注过了.
 
 天天上okok网站查看消息,

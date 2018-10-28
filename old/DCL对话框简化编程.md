@@ -19,7 +19,7 @@
  (list nil "" ": boxed_column{");;竖向排列各控件
  (list "is_wpj" "wpj*.dwg" "bool").......
  (list nil nil "}")
-[CODE]
+`
   [FONT=courier new]
 例子1:
 
@@ -64,4 +64,4 @@
   (init initlist "dlg")
   )
   [/FONT]
-[/CODE]
+`
